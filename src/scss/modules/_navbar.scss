@@ -1,0 +1,62 @@
+// ==========================================================================
+// Navbar
+// ==========================================================================
+
+.navvbar {	
+	position: relative;
+	@include mq(medium) {
+		margin-top: em(54px);
+		margin-bottom: 0;
+	}
+}
+
+.navbar-collapse {
+    padding-left: 0px !important; 
+    border-bottom: 1px solid #cbcfd1;
+}
+
+.navbar {
+    color: #8c8e90;
+    font-family: $font-family--primary;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: em(14px);
+    position: relative;
+}
+
+.nav > li > a {
+    text-shadow: none;
+    border-bottom: 2px solid #fff;
+    padding: 15px 24px 16px 22px;
+    background: transparent !important;
+    @include mq(medium) {
+        background: url('http://entiri.net/cadem_wb/img/menu-divider.png') right center no-repeat !important;
+    }
+}
+
+.nav > li.active > a,
+.nav > li > a:hover {
+    color: $color-accent !important;
+    border-bottom: 2px solid $color-accent !important;
+    -webkit-box-shadow: rgba(0, 0, 0, 0) 0 0 0 !important;
+    box-shadow: rgba(0, 0, 0, 0) 0 0 0 !important;
+}
+
+.navbar-default {
+    background-color: transparent;
+    border: none;
+}
+
+.navbar-brand {
+    height: 60px;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 20px;
+}
+
+.navbar-header {
+    @include mq(small) {
+        border-bottom: 1px solid #cbcfd1; 
+        padding-bottom: 10px;
+    }
+}

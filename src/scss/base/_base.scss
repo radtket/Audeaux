@@ -1,0 +1,346 @@
+// ==========================================================================
+// Base Styles
+// ==========================================================================
+
+* {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	color: palette(grey);
+	font-size: $base__font-size;
+	font-family: $font-family--primary;
+	line-height: ($base__line/$base__font-size);
+}
+
+// Text
+
+h1 {
+	@extend %hdln-prim;
+}
+
+h2 {
+	@extend %hdln-sec;
+}
+
+h3 {
+	font-size: em(18px);
+}
+
+h4 {
+	margin-top: em(22px, 14px);
+	margin-bottom: em(32px, 14px);
+	color: palette(grey, x-light);
+	text-transform: uppercase;
+	letter-spacing: $letter-space;
+	font-weight: $font-weight--medium;
+	font-size: em(14px);
+}
+
+a {
+	color: palette(grey, dark); 
+	text-decoration: none;
+	font-weight: $font-weight--medium;
+}
+
+p {
+	margin: 0 0 em(30px, 18px);
+	font-weight: $font-weight--light;
+	font-size: em(18px);
+	line-height: (27px/18px);
+}
+
+blockquote {
+	@media (min-width: 769px) {
+		margin: em(32px, 24px) 0;
+		padding: 0 0 0 5%;
+		border-left: em(8px, 24px) solid palette(grey, xx-light); 
+		font-size: em(24px);
+	}
+	font-weight: $font-weight--light;
+	font-style : italic;
+	font-size : em(20px);
+}
+
+// Lists
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+// Images
+
+img {
+  margin-bottom: em(24px);
+  max-width: 100%;
+  height: auto;
+}
+
+// Form elements
+
+input, 
+textarea {
+	display: block;
+	padding: 15px;
+	width: 100%; 
+	outline: 0;
+	border: 0;
+}
+
+input:focus, 
+textarea:focus {
+	transition: $trns_duration;
+}
+
+// Button
+
+button {
+	outline: 0;
+}
+
+// Layout
+
+footer {
+	border-top: 1px solid palette(grey, xx-light);
+	p {
+		font-size: em(16px);
+		margin-top: em(22px, 16px);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+.space30 {
+    height: 30px;
+    clear: both;
+}
+
+body {
+	background: #E9EFF0;
+}
+
+
+.wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+.wrapper__content {
+    padding: 60px 40px;
+    background: #fff;
+    border: 1px solid #d9dddf;
+}
+
+/* Search widget */
+
+.search-wrap{
+	position: relative;
+}
+.search-field{
+	width: 100% !important;
+	height: 40px !important;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.search-button{
+	width: 42px;
+	height: 40px;
+	line-height: 38px;
+	margin-top: -20px;
+	position: absolute;
+	top: 50%;
+	right: 1px;	
+	overflow: hidden;
+	background: transparent;
+	border: none;
+	outline: none;
+	color: #999;
+    font-size: 14px;
+}
+
+.search-button:hover{
+	color: #111;
+}
+.search-button:hover + .search-field{
+	border-color: #ccc;
+}
+
+
+
+.slide-content {
+	height: 500px;
+	width: 100%;
+	text-align: center;
+	background-size: cover;
+	position: relative;
+	.overlay {
+		display: block;
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		cursor: -webkit-grab;
+		cursor: grab;
+		background-repeat: repeat;
+		background: url("../img/3px-tile.png"), rgba(0,0,0, .5);
+		padding: 50px 0;
+		a {
+			color: $yellow;
+			border-color: $yellow;
+			&:hover {
+				color: $yellow;
+			}
+		}
+	}
+	@include m(one) {
+		background-image: url('http://edmsauce.wpengine.netdna-cdn.com/wp-content/uploads/2013/12/20110418afrojack-1.jpg');
+		background-size: cover;
+	}
+	@include m(two) {
+		background-image: url('http://djsintheworld.com/wp-content/uploads/2014/10/carl-cox-mixmag-interview-nile-rodgers-collaboration.jpg');
+		background-size: cover;
+	}
+	@include m(three) {
+		background-image: url('http://img.ccrd.clearchannel.com/media/mlib/2135/2014/06/default/carnage_0_1401815509.jpg');
+		background-size: cover;
+	}
+}
+
+
+
+
+/* ==============================
+   Blog
+   ============================== */
+
+
+
+
+.blog {
+	@include e(media) {
+		margin-bottom: 30px;
+	}
+	@include e(item) {
+		margin-bottom: 80px;
+		position: relative;
+		@include m(title) {
+			margin: 0 0 .5em 0;
+			padding: 0;
+			font-size: em(24px);
+			font-weight: $font-weight--medium;
+			text-transform: uppercase;
+			letter-spacing: 0.2em;
+			font-family: $font-family--primary;
+			a {
+				color: #111;
+				text-decoration: none;
+				&:hover{
+					color: #777;
+					text-decoration: none;
+				}
+			}
+		}
+		@include m(data) {
+			margin-bottom: 30px;
+			text-transform: uppercase;
+			font-size: 11px;
+			letter-spacing: 1px;
+			color: #aaa;
+			a { 
+				color: #aaa;
+				text-decoration: none;
+				-webkit-transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);  
+				-moz-transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000); 
+				-o-transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+				-ms-transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000); 
+				transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+				&:hover{
+					color: #000;
+					text-decoration: none;
+				}
+			}
+		}
+		@include m(body) {
+			font-size: 16px;
+			font-weight: 300;
+			color: #5f5f5f;
+			line-height: 1.8;
+		}
+	}
+}
+
+.separator{
+	margin: 0 5px;
+}
+
+.widget {
+    margin-bottom: 60px;
+}
+
+.widget-title {
+	margin-bottom: 20px;
+	padding-bottom: 5px;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 400;
+	color: #777;
+	border-bottom: 1px solid #ccc;
+	letter-spacing: 0.2em;
+}
+
+.widget-body {
+    font-size: 13px;
+    color: #777;
+}
+
+
+.slick-dots li button:before
+{
+    font-family: 'slick';
+    font-size: 6px;
+    line-height: 20px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 20px;
+    height: 20px;
+
+    content: '•';
+    text-align: center;
+
+    opacity: 1;
+    color: $color-accent;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.slick-dots li.slick-active button:before
+{
+    opacity: 1;
+    color: black;
+}
+
+
+
+
+
+
+
+
+
+
+

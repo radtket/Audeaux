@@ -1,0 +1,151 @@
+// ==========================================================================
+// Nav
+// ==========================================================================
+
+.navv {
+	margin-top: em(20px);
+	margin-bottom: em(30px);
+  
+  @include e(item) {
+    @extend %nav-item-horz;
+    a {
+      @extend %nav-item-link;
+      color: palette(grey);
+      &:hover {
+        @extend %nav-item-on;
+      }
+    }
+    
+    @include m(current) {
+      @extend %nav-item-horz;
+      a {
+        @extend %nav-item-link;
+        @extend %nav-item-on;
+      }    
+    }
+    
+  }
+}
+
+
+.header__social {
+  @extend .pull-right;
+  @extend .list-inline;
+  padding-top: 8px;
+}
+
+.header__social--icon {
+  color: rgba(0,0,0, .2);
+  padding-right: 5px;
+  padding-left: 5px;
+
+  &:hover {
+    color: rgba(0,0,0, .7);
+    text-decoration: none;
+  }
+}
+
+
+
+
+
+.footer-distributed{
+  background-color: #292c2f;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: normal 16px sans-serif;
+
+  padding: 45px 50px;
+  margin-top: 80px;
+}
+
+.footer-distributed .footer-left p{
+  color:  #8c8e90;
+  font-size: 14px;
+  margin: 0;
+  font-family: $font-family--secondary;
+}
+
+/* Footer links */
+
+.footer-distributed p.footer-links{
+  font-size:18px;
+  font-weight: bold;
+  color:  #ffffff;
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+.footer-distributed p.footer-links a{
+  display:inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color:  inherit;
+}
+
+.footer-distributed .footer-right{
+  float: right;
+  margin-top: 6px;
+  max-width: 180px;
+}
+
+.footer-distributed .footer-right a{
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background-color:  #33383b;
+  border-radius: 2px;
+
+  font-size: 20px;
+  color: #E9EFF0;
+  text-align: center;
+  line-height: 35px;
+
+  margin-left: 3px;
+}
+
+
+.breadcrumb {
+    padding: 8px 15px;
+    list-style: none;
+    background-color: transparent;
+    border-radius: 0px;
+    color: #8c8e90;
+    font-family: $font-family--primary;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: em(14px);
+    margin-bottom: 5px;
+    a {
+      color: #E9EFF0;
+      text-decoration: none;
+    }
+}
+
+.breadcrumb > li + li:before {
+    content: "/ ";
+    padding: 0 5px;
+    color: $yellow;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 600px) {
+
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-right{
+    text-align: center;
+  }
+
+  .footer-distributed .footer-right{
+    float: none;
+    margin: 0 auto 20px;
+  }
+
+  .footer-distributed .footer-left p.footer-links{
+    line-height: 1.8;
+  }
+}
+

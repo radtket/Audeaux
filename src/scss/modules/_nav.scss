@@ -112,14 +112,16 @@
     list-style: none;
     background-color: transparent;
     border-radius: 0px;
-    color: #8c8e90;
     font-family: $font-family--primary;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: em(14px);
     margin-bottom: 5px;
-    a {
+    li.active > a {
       color: #E9EFF0;
+    }
+    a {
+      color: #8c8e90;
       text-decoration: none;
     }
 }

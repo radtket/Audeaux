@@ -9046,7 +9046,9 @@ a.btn-mod:focus {
 }
 
 .navbar-brand {
-  height: 60px;
+  max-width: 170px;
+  width: 100%;
+  height: auto;
   margin-bottom: 0;
   padding-top: 0;
   padding-bottom: 20px;
@@ -9176,7 +9178,6 @@ a.btn-mod:focus {
   list-style: none;
   background-color: transparent;
   border-radius: 0px;
-  color: #8c8e90;
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -9184,8 +9185,12 @@ a.btn-mod:focus {
   margin-bottom: 5px;
 }
 
-.breadcrumb a {
+.breadcrumb li.active > a {
   color: #E9EFF0;
+}
+
+.breadcrumb a {
+  color: #8c8e90;
   text-decoration: none;
 }
 

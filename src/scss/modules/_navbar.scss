@@ -48,7 +48,9 @@
 }
 
 .navbar-brand {
-    height: 60px;
+    max-width: 170px;
+    width: 100%;
+    height: auto;
     margin-bottom: 0;
     padding-top: 0;
     padding-bottom: 20px;

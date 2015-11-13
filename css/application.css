@@ -8237,6 +8237,75 @@ footer p {
   letter-spacing: 0.2em;
 }
 
+.list-item {
+  position: relative;
+  overflow: auto;
+  padding: 18px;
+  margin: 0;
+  list-style-type: none;
+  background-color: #fff;
+}
+
+.list-item img {
+  margin-bottom: 0;
+}
+
+.list-artist {
+  color: #3D3D3D;
+  display: block;
+  padding-top: 3px;
+  margin-bottom: -1px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.125em;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.list-title {
+  font-size: 0.75em;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.list-genres {
+  font-size: 11px;
+  padding-top: 5px;
+  font-weight: 600;
+}
+
+.list-genres a {
+  display: inline-block;
+  background: #F4F4F4;
+  padding: 2px 4px;
+  color: #4B4949;
+  margin-right: 10px;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+
+.list-item .list-meta {
+  font-size: 11px;
+  border-bottom: 1px solid #F8F8F8;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+  font-weight: 400;
+  color: #616161;
+  text-transform: uppercase;
+}
+
+.list-excerpt {
+  padding: 0;
+  margin: 0;
+  color: #535353;
+  font-size: 1em;
+}
+
 .panel, .panel--centered {
   padding-top: 1.875em;
 }

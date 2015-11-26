@@ -51,6 +51,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link href='bower_components/slick-carousel/slick/slick.css' rel='stylesheet'>
     <link href='bower_components/slick-carousel/slick/slick-theme.css' rel='stylesheet'>
+    <link rel="stylesheet" href="fuelux/css/fuelux.min.css">
 
     <link href="css/application.css" rel="stylesheet">
 
@@ -63,16 +64,7 @@
 
 </head>
 
-<body>
-
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=888173541301485";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+<body class="fuelux">
 
 <div class="space30"></div>
 <div class="wrapper">
@@ -130,20 +122,6 @@
               <li><a href="#">Video</a></li>
               <li><a href="#">Art</a></li>
               <li><a href="#">DC</a></li>
-              <!--
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Action</a></li>
-                  <li><a href="#">Another action</a></li>
-                  <li><a href="#">Something else here</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li class="dropdown-header">Nav header</li>
-                  <li><a href="#">Separated link</a></li>
-                  <li><a href="#">One more separated link</a></li>
-                </ul>
-              </li>
-              -->
             </ul>
           </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
@@ -176,6 +154,7 @@
 
       <div class="row">
         <div class="col-sm-8">
+        <div class="infinitescroll" id="myInfiniteScroll1" style="height: 200px;"></div>
 
           <!-- Post -->
           <div class="blog__item">
@@ -288,6 +267,41 @@
           </div> <!-- End Post -->
 
 
+         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         </div> <!-- End .col-sm-8 -->
 
@@ -296,7 +310,7 @@
               <h5 class="widget-title">This Weeks Vibes</h5>
               <div class="widget-body">
                 <!-- Soundcloud Widget -->
-                <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/147088158&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+
               </div>
           </div>
 
@@ -304,7 +318,7 @@
           <h5 class="widget-title">Instagram</h5>
           <div class="widget-body">
             <!-- Instagram Widget -->
-            <script src="//instansive.com/widget/js/instansive.js"></script><iframe src="//instansive.com/widgets/3a63c57064593535a9c24cbd487f49b77513a8aa.html" id="instansive_3a63c57064" name="instansive_3a63c57064"  scrolling="no" allowtransparency="true" class="instansive-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+
           </div>
         </div>
 
@@ -312,7 +326,7 @@
           <h5 class="widget-title">Facebook</h5>
           <div class="widget-body">
             <!-- Facebook Widget -->
-            <div class="fb-page center-block" data-href="https://www.facebook.com/Audeaux-961638733882513" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"></div>
+
           </div>
         </div>
 
@@ -320,8 +334,7 @@
           <h5 class="widget-title">Tweets from last night</h5>
           <div class="widget-body">
             <!-- Twitter Widget -->
-            <a class="twitter-timeline" href="https://twitter.com/audeaux_" data-widget-id="657223994400243712">Tweets by @audeaux_</a>
-            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
           </div>
         </div>
 
@@ -358,8 +371,9 @@
 </div><!-- End Main Wrapper -->
   
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script type="text/javascript" src="js/script.min.js"></script>
-    <script type="text/javascript" src="js/plugins.js"></script>
+<script type="text/javascript" src="js/script.min.js"></script>
+<script src="fuelux/js/fuelux.min.js"></script>
+<script type="text/javascript" src="js/plugins.js"></script>
 
 </body>
 

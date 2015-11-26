@@ -31,19 +31,45 @@
 .header__social {
   @extend .pull-right;
   @extend .list-inline;
-  padding-top: 8px;
+  > li {
+    padding: 8px 5px 0 5px;
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+    &:hover,
+    &:focus,
+    &:active {
+      transform: scale(1.2);
+    }
+  }
 }
 
 .header__social--icon {
-  color: rgba(0,0,0, .2);
+  color: #999;
   padding-right: 5px;
   padding-left: 5px;
 
   &:hover {
-    color: rgba(0,0,0, .7);
+    color: $black;
     text-decoration: none;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -104,7 +130,33 @@
   line-height: 35px;
 
   margin-left: 3px;
+
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  &:hover,
+  &:focus,
+  &:active {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    color: $yellow;
+  }
 }
+
+
+
+
+
+
+
 
 
 .breadcrumb {
@@ -123,6 +175,9 @@
     a {
       color: #8c8e90;
       text-decoration: none;
+      &:hover {
+        color: #E9EFF0;
+      }
     }
 }
 

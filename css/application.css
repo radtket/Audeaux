@@ -7996,13 +7996,16 @@ th {
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100% !important;
+}
+
 body {
   color: #797e83;
   background: #E9EFF0;
   font-size: 16px;
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.5;
-  background: red;
 }
 
 .space30 {
@@ -8305,6 +8308,10 @@ footer p {
   margin: 0;
   color: #535353;
   font-size: 1em;
+}
+
+.infinitescroll {
+  height: 100%;
 }
 
 .panel, .panel--centered {
@@ -9252,18 +9259,29 @@ a.btn-mod:focus {
   color: #797e83;
 }
 
-.header__social {
-  padding-top: 8px;
+.header__social > li {
+  padding: 8px 5px 0 5px;
+  vertical-align: middle;
+  transform: translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  transition-duration: 0.3s;
+  transition-property: transform;
+}
+
+.header__social > li:hover, .header__social > li:focus, .header__social > li:active {
+  transform: scale(1.2);
 }
 
 .header__social--icon {
-  color: rgba(0, 0, 0, 0.2);
+  color: #999;
   padding-right: 5px;
   padding-left: 5px;
 }
 
 .header__social--icon:hover {
-  color: rgba(0, 0, 0, 0.7);
+  color: #0b0b0b;
   text-decoration: none;
 }
 
@@ -9318,6 +9336,23 @@ a.btn-mod:focus {
   text-align: center;
   line-height: 35px;
   margin-left: 3px;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+
+.footer-distributed .footer-right a:hover, .footer-distributed .footer-right a:focus, .footer-distributed .footer-right a:active {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  color: #efc319;
 }
 
 .breadcrumb {
@@ -9339,6 +9374,10 @@ a.btn-mod:focus {
 .breadcrumb a {
   color: #8c8e90;
   text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: #E9EFF0;
 }
 
 .breadcrumb > li + li:before {

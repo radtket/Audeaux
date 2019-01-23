@@ -15,11 +15,12 @@
 	// Nav Toggle
 	@include m(nav-toggle) {
 		@extend %icn--ui;
-		width: 25px;
-		height: 17px;
-		border-top: solid 3px palette(grey);
 		border-bottom: solid 3px palette(grey);
+		border-top: solid 3px palette(grey);
+		height: 17px;
 		position: relative;
+		width: 25px;
+
 		@include p-el(before, 25px, 3px) {
 			background: palette(grey, light);
 			top: 4px;

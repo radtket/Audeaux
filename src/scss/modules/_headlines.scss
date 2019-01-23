@@ -14,15 +14,15 @@
 		}
 	}
 
- 	&-secondary {
+	&-secondary {
 		@extend %hdln-sec;
 		margin-bottom: em(22px, 24px);
 
 		@include m(grouped) {
 			@extend %hdln-sec;
+			margin-bottom: em(54px, 24px);
 			margin-top: em(10px, 24px);
-	 		margin-bottom: em(54px, 24px);
-		}		
+		}
 	}
 
 }

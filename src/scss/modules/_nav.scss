@@ -3,206 +3,186 @@
 // ==========================================================================
 
 .navv {
-	margin-top: em(20px);
 	margin-bottom: em(30px);
-  
-  @include e(item) {
-    @extend %nav-item-horz;
-    a {
-      @extend %nav-item-link;
-      color: palette(grey);
-      &:hover {
-        @extend %nav-item-on;
-      }
-    }
-    
-    @include m(current) {
-      @extend %nav-item-horz;
-      a {
-        @extend %nav-item-link;
-        @extend %nav-item-on;
-      }    
-    }
-    
-  }
+	margin-top: em(20px);
+
+	@include e(item) {
+		@extend %nav-item-horz;
+
+		a {
+			@extend %nav-item-link;
+			color: palette(grey);
+
+			&:hover {
+				@extend %nav-item-on;
+			}
+		}
+
+		@include m(current) {
+			@extend %nav-item-horz;
+
+			a {
+				@extend %nav-item-link;
+				@extend %nav-item-on;
+			}
+		}
+	}
 }
 
-
 .header__social {
-  @extend .pull-right;
-  @extend .list-inline;
-  > li {
-    padding: 8px 5px 0 5px;
-    vertical-align: middle;
-    transform: translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    backface-visibility: hidden;
-    -moz-osx-font-smoothing: grayscale;
-    transition-duration: 0.3s;
-    transition-property: transform;
-    &:hover,
-    &:focus,
-    &:active {
-      transform: scale(1.2);
-    }
-  }
+	float: right;
+	list-style: none;
+	margin-left: -5px;
+	padding-left: 0;
+
+	>li {
+		backface-visibility: hidden;
+		box-shadow: 0 0 1px rgba($black, 0);
+		display: inline-block;
+		-moz-osx-font-smoothing: grayscale;
+		padding: 8px 5px 0;
+		transform: translateZ(0);
+		transition-duration: 0.3s;
+		transition-property: transform;
+		vertical-align: middle;
+
+		&:hover,
+		&:focus,
+		&:active {
+			transform: scale(1.2);
+		}
+	}
 }
 
 .header__social--icon {
-  color: #999;
-  padding-right: 5px;
-  padding-left: 5px;
+	color: $color-star-dust;
+	padding-left: 5px;
+	padding-right: 5px;
 
-  &:hover {
-    color: $black;
-    text-decoration: none;
-  }
+	&:hover {
+		color: $black;
+		text-decoration: none;
+	}
 }
 
+.footer-distributed {
+	background-color: $color-baltic-sea;
+	box-shadow: 0 1px 1px 0 rgba($black, 0.12);
+	box-sizing: border-box;
+	font: normal 16px sans-serif;
+	margin-top: 80px;
+	padding: 45px 50px;
+	text-align: left;
+	width: 100%;
 
+	p {
+		&.footer-links {
+			color: $white;
+			font-size: 18px;
+			font-weight: bold;
+			margin: 0 0 10px;
+			padding: 0;
 
+			a {
+				color: inherit;
+				display: inline-block;
+				line-height: 1.8;
+				text-decoration: none;
+			}
+		}
+	}
 
+	.footer-right {
+		float: right;
+		margin-top: 6px;
+		max-width: 180px;
 
+		@media (max-width: 600px) {
+			float: none;
+			margin: 0 auto 20px;
+			text-align: center;
+		}
 
+		a {
+			backface-visibility: hidden;
+			background-color: $color-outer-space;
+			border-radius: 2px;
+			box-shadow: 0 0 1px rgba($black, 0);
+			color: $color-gin;
+			display: inline-block;
+			font-size: 20px;
+			height: 35px;
+			line-height: 35px;
+			margin-left: 3px;
+			text-align: center;
+			transform: translateZ(0);
+			transition-duration: 0.3s;
+			transition-property: transform;
+			vertical-align: middle;
+			width: 35px;
 
+			&:hover,
+			&:focus,
+			&:active {
+				color: $yellow;
+				transform: scale(1.1);
+			}
+		}
+	}
 
+	.footer-left {
+		@media (max-width: 600px) {
+			text-align: center;
+		}
 
+		p {
+			color: $color-oslo-gray;
+			font-family: $font-family--secondary;
+			font-size: 14px;
+			margin: 0;
 
-
-
-
-
-
-
-
-.footer-distributed{
-  background-color: #292c2f;
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
-  box-sizing: border-box;
-  width: 100%;
-  text-align: left;
-  font: normal 16px sans-serif;
-
-  padding: 45px 50px;
-  margin-top: 80px;
+			&.footer-links {
+				@media (max-width: 600px) {
+					line-height: 1.8;
+				}
+			}
+		}
+	}
 }
-
-.footer-distributed .footer-left p{
-  color:  #8c8e90;
-  font-size: 14px;
-  margin: 0;
-  font-family: $font-family--secondary;
-}
-
-/* Footer links */
-
-.footer-distributed p.footer-links{
-  font-size:18px;
-  font-weight: bold;
-  color:  #ffffff;
-  margin: 0 0 10px;
-  padding: 0;
-}
-
-.footer-distributed p.footer-links a{
-  display:inline-block;
-  line-height: 1.8;
-  text-decoration: none;
-  color:  inherit;
-}
-
-.footer-distributed .footer-right{
-  float: right;
-  margin-top: 6px;
-  max-width: 180px;
-}
-
-.footer-distributed .footer-right a{
-  display: inline-block;
-  width: 35px;
-  height: 35px;
-  background-color:  #33383b;
-  border-radius: 2px;
-
-  font-size: 20px;
-  color: #E9EFF0;
-  text-align: center;
-  line-height: 35px;
-
-  margin-left: 3px;
-
-  vertical-align: middle;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  &:hover,
-  &:focus,
-  &:active {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-    color: $yellow;
-  }
-}
-
-
-
-
-
-
-
-
 
 .breadcrumb {
-    padding: 8px 15px;
-    list-style: none;
-    background-color: transparent;
-    border-radius: 0px;
-    font-family: $font-family--primary;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: em(14px);
-    margin-bottom: 5px;
-    li.active > a {
-      color: #E9EFF0;
-    }
-    a {
-      color: #8c8e90;
-      text-decoration: none;
-      &:hover {
-        color: #E9EFF0;
-      }
-    }
+	background-color: transparent;
+	border-radius: 0;
+	font-family: $font-family--primary;
+	font-size: em(14px);
+	letter-spacing: 2px;
+	list-style: none;
+	margin-bottom: 5px;
+	padding: 8px 15px;
+	text-transform: uppercase;
+
+	li {
+		&.active {
+			>a {
+				color: $color-gin;
+			}
+		}
+	}
+
+	>li+li {
+		&::before {
+			color: $yellow;
+			content: "/ ";
+			padding: 0 5px;
+		}
+	}
+
+	a {
+		color: $color-oslo-gray;
+		text-decoration: none;
+
+		&:hover {
+			color: $color-gin;
+		}
+	}
 }
-
-.breadcrumb > li + li:before {
-    content: "/ ";
-    padding: 0 5px;
-    color: $yellow;
-}
-
-/* If you don't want the footer to be responsive, remove these media queries */
-
-@media (max-width: 600px) {
-
-  .footer-distributed .footer-left,
-  .footer-distributed .footer-right{
-    text-align: center;
-  }
-
-  .footer-distributed .footer-right{
-    float: none;
-    margin: 0 auto 20px;
-  }
-
-  .footer-distributed .footer-left p.footer-links{
-    line-height: 1.8;
-  }
-}
-

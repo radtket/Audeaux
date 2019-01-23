@@ -4,96 +4,123 @@
 
 // Font Stacks
 
-$font-url--google        : 'http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900';
-$font-family--primary    : 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$font-family--secondary  : 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-url--google: "http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900";
+$font-family--primary: "Lato",
+"Helvetica Neue",
+Helvetica,
+Arial,
+sans-serif;
+$font-family--secondary: "Helvetica Neue",
+Helvetica,
+Arial,
+sans-serif;
 
 // Font Weights
 
-$font-weight--thin       : 100;
-$font-weight--light      : 300;
-$font-weight--medium     : 400;
-$font-weight--bold       : 700;
-$font-weight--ultra-bold : 900;
+$font-weight--thin: 100;
+$font-weight--light: 300;
+$font-weight--medium: 400;
+$font-weight--bold: 700;
+$font-weight--ultra-bold: 900;
 
 // Descriptive Base Colors
 
-$white : #fff;
-$black : #0b0b0b;
-$grey  : #797e83;
+$white: #ffffff;
+$black: #0b0b0b;
+$grey: #797e83;
 
-$fountain-blue  : #52bab3;
-$emerald        : #5ece7f;
-$sunglo         : #e67478;
-$coral          : #ff784f;
-$purple-majesty : #9279c3;
-$scooter        : #39add1;
+$fountain-blue: #52bab3;
+$emerald: #5ece7f;
+$sunglo: #e67478;
+$coral: #ff784f;
+$purple-majesty: #9279c3;
+$scooter: #39add1;
 
-$yellow			: #efc319;
+$yellow: #efc319;
 
 // Color Usage
 
-$color-primary   : $fountain-blue;
-$color-secondary : $scooter;
-$color-accent    : $yellow;
-$color-shadow    : rgba($black, .2);
+$color-primary: $fountain-blue;
+$color-secondary: $scooter;
+$color-accent: $yellow;
+$color-shadow: rgba($black, 0.2);
 
 // Color Palette Modifiers
 
-$color-palettes: (
-	grey: (
-		xx-light : lighten($grey, 43%),
-		x-light  : lighten($grey, 35%),
-	  light    : lighten($grey, 12%),
-	  base     : $grey,
-	 	dark     : darken($grey, 8%),
-	 	x-dark   : darken($grey, 16%)
-	),
-	black: (
-		light    : lighten($black, 10%),
-		base     : $black,
-		dark     : darken($black, 10%)
-	)
-);
+$color-palettes: (grey: (xx-light: lighten($grey, 43%),
+x-light: lighten($grey, 35%),
+light: lighten($grey, 12%),
+base: $grey,
+dark: darken($grey, 8%),
+x-dark: darken($grey, 16%)),
+black: (light: lighten($black, 10%),
+base: $black,
+dark: darken($black, 10%)));
 
 // UI Colors
 
-$ui-colors: (
-	default : $fountain-blue,
-	success : $emerald,
-	error   : $sunglo,
-	warning : $coral,
-	info    : $purple-majesty
-);
+$ui-colors: (default: $fountain-blue,
+success: $emerald,
+error: $sunglo,
+warning: $coral,
+info: $purple-majesty);
 
 // Text
 
-$base__font-size : 16px;
-$base__line      : 24px;
-$letter-space    : 1px;
+$base--font-size: 16px;
+$base--line: 24px;
+$letter-space: 1px;
 
 // Border radius
 
-$br--default    : .4em;
-$br--round      : 50%;
+$br--default: 0.4em;
+$br--round: 50%;
 
 // Transitions
 
-$trns-duration  : .3s;
+$trns-duration: 0.3s;
 
 // Path to Assets
 
-$path--rel      : "../img";
+$path--rel: "../img";
 
 // Grid
 
-$g-col-width    : 65px;
-$g-gutter-width : 20px;
-$g-col-count    : 12;
-$g-cont-max-w   : 1050px;
+$g-col-width: 65px;
+$g-gutter-width: 20px;
+$g-col-count: 12;
+$g-cont-max-w: 1050px;
 
 // Breakpoints
 
-$brkpoint-sm    : 1px;
-$brkpoint-md    : 768px;
-$brkpoint-lg    : 1100px;
+$brkpoint-sm: 1px;
+$brkpoint-md: 768px;
+$brkpoint-lg: 1100px;
+
+
+$black: #000000;
+$black-12: rgba($black, 0.12);
+$black-40: rgba($black, 0.4);
+$black-70: rgba($black, 0.7);
+$color-alizarin-crimson: #e41919;
+$color-baltic-sea: #292c2f;
+$color-bunker: #151515;
+$color-gin: #e9eff0;
+$color-jumbo: #797e83;
+$color-lightning-yellow: #efc319;
+$color-log-cabin-90: rgba(34, 34, 34, 0.9);
+$color-oslo-gray: #8c8e90;
+$color-outer-space: #33383b;
+$color-quill-gray: #d5d5d5;
+$color-silver-chalice: #aaaaaa;
+$color-star-dust: #999da1;
+$color-tapa: #777777;
+$color-tundora: #444444;
+$color-woodsmoke: #111111;
+$mercury: #e5e5e5;
+$color-cool-grey: #cbcfd1;
+$white: #ffffff;
+$off-white: #f4f4f4;
+$white-75: rgba($white, 0.75);
+$white-80: rgba($white, 0.8);
+$white-85: rgba($white, 0.85);

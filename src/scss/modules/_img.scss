@@ -3,22 +3,24 @@
 // ==========================================================================
 
 .img {
-  @include m(wrap) {
-    border: 1px solid palette(grey, x-light);
-    padding: em(12px);
-  }
-  @include m(avatar) {
-    display: block;
-    border-radius: $br--round;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: em(24px);
-  }
-  @include m(hero) {
-    @media (min-width: 769px) {
-      margin-bottom: em(42px);
-    }
-  }
+	@include m(wrap) {
+		border: 1px solid palette(grey, x-light);
+		padding: em(12px);
+	}
+
+	@include m(avatar) {
+		border-radius: $br--round;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: em(24px);
+	}
+
+	@include m(hero) {
+		@media (min-width: 769px) {
+			margin-bottom: em(42px);
+		}
+	}
 }
 
 
@@ -28,50 +30,55 @@
 // ==========================================================================
 
 .slide-content {
-  height: 500px;
-  width: 100%;
-  text-align: center;
-  background-size: cover;
-  position: relative;
-  .overlay {
-    display: block;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    cursor: -webkit-grab;
-    cursor: grab;
-    background-repeat: repeat;
-    background: url("../img/3px-tile.png"), rgba(0,0,0, .5);
-    padding: 50px 0;
-    a {
-      color: $yellow;
-      border-color: $yellow;
-      &:hover {
-        color: $yellow;
-      }
-    }
-  }
-  @include m(one) {
-    background-image: url('http://edmsauce.wpengine.netdna-cdn.com/wp-content/uploads/2013/12/20110418afrojack-1.jpg');
-    background-size: cover;
-  }
-  @include m(two) {
-    background-image: url('http://djsintheworld.com/wp-content/uploads/2014/10/carl-cox-mixmag-interview-nile-rodgers-collaboration.jpg');
-    background-size: cover;
-  }
-  @include m(three) {
-    background-image: url('http://img.ccrd.clearchannel.com/media/mlib/2135/2014/06/default/carnage_0_1401815509.jpg');
-    background-size: cover;
-  }
+	background-size: cover;
+	height: 500px;
+	position: relative;
+	text-align: center;
+	width: 100%;
+
+	@include m(one) {
+		background-image: url("../img/slider/afrojack.jpg");
+		background-size: cover;
+	}
+
+	@include m(two) {
+		background-image: url("../img/slider/rlgrime.jpg");
+		background-size: cover;
+	}
+
+	@include m(three) {
+		background-image: url("../img/slider/carnage.jpg");
+		background-size: cover;
+	}
+
+	.overlay {
+		background: url("../img/3px-tile.png"), rgba($black, .5);
+		background-repeat: repeat;
+		bottom: 0;
+		cursor: grab;
+		display: block;
+		left: 0;
+		padding: 50px 0;
+		position: absolute;
+		right: 0;
+
+		a {
+			border-color: $yellow;
+			color: $yellow;
+
+			&:hover {
+				color: $yellow;
+			}
+		}
+	}
 }
 
-.slick-dots li button:before {
-    opacity: 1;
-    color: $color-accent;
+.slick-dots li button::before {
+	color: $color-accent;
+	opacity: 1;
 }
 
-.slick-dots li.slick-active button:before {
-    opacity: 1;
-    color: black;
+.slick-dots li.slick-active button::before {
+	color: $black;
+	opacity: 1;
 }
